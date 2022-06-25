@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Aula24062022
+namespace ConsoleApp2
 {
     internal class Piano : Instrument
     {
