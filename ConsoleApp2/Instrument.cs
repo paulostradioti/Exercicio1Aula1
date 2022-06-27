@@ -8,8 +8,13 @@ namespace ConsoleApp2
 {
     internal abstract class Instrument
     {
-        public int NumStrings { get; set; }
-        public decimal Price { get; set; }
         public string Maker { get; set; }
+        public decimal Price { get; set; }
+
+        protected Instrument(string maker, decimal price)
+        {
+            Maker = maker;
+            Price = price;
+        }
     }
 }

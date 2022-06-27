@@ -8,5 +8,10 @@ namespace ConsoleApp2
 {
     internal class Violin : Instrument
     {
+        public int NumStrings { get; set; }
+
+        public Violin(string maker, decimal price, int numStrings) : base(maker, price)
+        {
+        }
     }
 }
