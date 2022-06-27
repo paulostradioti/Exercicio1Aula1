@@ -10,13 +10,18 @@ namespace ConsoleApp2
 {
     internal static class Inventory
     {
-        private static List<Guitar> inventory = new List<Guitar>();
+        private static List<Instrument> inventory = new List<Instrument>();
         private static string dbPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "data.json");
         public static int Count { get => inventory.Count;  }
 
         internal static void Include(Guitar guitar)
         {
             inventory.Add(guitar);
+        }
+
+        internal static void Include(Piano piano)
+        {
+            inventory.Add(piano);
         }
 
         internal static void Save()
@@ -31,7 +36,7 @@ namespace ConsoleApp2
                 Save();
 
             var content = File.ReadAllText(dbPath);
-            inventory = JsonSerializer.Deserialize<List<Guitar>>(content);
+            inventory = JsonSerializer.Deserialize<List<Instrument>>(content);
         }
     }
 }

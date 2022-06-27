@@ -8,6 +8,7 @@ namespace ConsoleApp2
 {
     internal class Guitar : Instrument
     {
+        public int NumStrings { get; set; }
         public int NumFret { get; set; }
     }
 }
